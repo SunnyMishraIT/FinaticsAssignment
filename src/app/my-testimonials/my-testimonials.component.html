@@ -1,0 +1,56 @@
+<div>
+<div *ngIf="searchdata != true">
+<h4>My Testimonials</h4>
+<h6>Pending</h6>
+  <!-- Pending Table  -->
+  <table class="testimonial-card">
+    <tr *ngFor="let testimonial of pendingTestimonials" class="tablerow">
+      <td class="testimonial-img">
+        <img src="{{testimonial.user.avatar}}" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'"  alt="Testimonial Image" class="rounded-circle" width="200px">
+      </td>
+      <td class="testimonial-content">
+        <p>{{testimonial.text}}</p>
+        <span class="testimonial-author"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z"/>
+        </svg>{{testimonial.user.name}}</span>
+        <div class="testimonial-actions">
+          <button class="accept-btn border-end" (click)="onaccept(testimonial)">Accept</button>
+          <!-- | &#124; -->
+          <button class="reject-btn" (click)="onreject(testimonial)">Reject</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div *ngIf="pendingTestimonials.length <= 0 || pendingTestimonials == undefined || pendingTestimonials == null
+   ">
+<p> No Pending Testimonials</p>
+  </div>
+  <!-- Approved Table -->
+  <h6>Approved</h6>
+  <table class="testimonial-card">
+    <tr *ngFor="let testimonial of approvedTestimonials">
+      <td class="testimonial-img">
+        <img src="{{testimonial.user.avatar}}" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'" width="200px" alt="Testimonial Image" class="rounded-circle">
+      </td>
+      <td class="testimonial-content">
+        <p>{{testimonial.text}}</p>
+        <span class="testimonial-author">{{testimonial.user.name}}</span>
+      </td>
+    </tr>
+  </table>
+</div>
+  <div *ngIf="searchdata == true">
+    <h6>Testimonials Search Results on the basis of Author Name</h6>
+    <table class="testimonial-card">
+    <tr *ngFor="let testimonial of filteredData">
+      <td class="testimonial-img">
+        <img src="{{testimonial.user.avatar}}" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'" width="200px" alt="Testimonial Image" class="rounded-circle">
+      </td>
+      <td class="testimonial-content">
+        <p>{{testimonial.text}}</p>
+        <span class="testimonial-author">{{testimonial.user.name}}</span>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>

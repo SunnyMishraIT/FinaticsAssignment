@@ -1,0 +1,53 @@
+   .testimonial-card {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-img {
+    width: 100px;
+    padding-right: 20px;
+  }
+
+  .tablerow {
+    border: 1 px solid rgb(218, 215, 215);
+    box-shadow: #a19999;
+  }
+  
+  .testimonial-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    display: block;
+    padding :0px 10px 0px 10px;
+  }
+  
+  .testimonial-actions {
+    text-align: right;
+  }
+  
+  .testimonial-content {
+    vertical-align: bottom;
+  }
+  
+  .testimonial-actions button {
+    font-size: 18px;
+    padding: 0px 10px 5px 0px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .accept-btn {
+    color: #28a745;
+    background-color: transparent;
+  }
+  
+  .reject-btn {
+    background-color: transparent;
+    color: red;
+  }
+  

@@ -1,0 +1,76 @@
+.body{
+  margin : 10px 10px 10px 10px
+}
+.certificates {
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.testimonials {
+  margin: 10px 0px 10px 0px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+}
+.searchbar{
+ width: 600px;
+ height: 45px;   
+ border-radius: 8px;
+}
+.leftside {
+    display: flex;
+}
+.rightside {
+    display: flex;
+}
+nav {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .active{
+    color: blue;
+    text-decoration: underline;
+}
+  
+  @media screen and (max-width: 600px) {
+    nav {
+      flex-direction: column;
+    }
+    
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    li {
+      margin: 5px 0;
+    }
+  }
+  

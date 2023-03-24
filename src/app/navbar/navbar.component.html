@@ -1,0 +1,40 @@
+<!-- <nav class="top">
+    
+  </nav> -->
+  <header>
+    <div class="leftside">
+    <div>
+        <a href="#">ILLUME</a>
+    </div>
+    <div class="searchbar" role="search">
+        <input type="text" class="searchbar" placeholder="Search Testimonials " [(ngModel)]="searchTestimonial" (keypress)="searchTestimonialData($event)" (keypress)="one.getData()" (keydown)="one.clearsearch()" (keydown)="searchTestimonialData($event)">
+    </div>
+</div>
+<div class="rightside">
+    <div class="rightside">
+        <a >Cart</a>
+        <a >Bell</a>
+        <a >User</a>
+    </div>
+</div>
+  </header>
+  
+<nav>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Diagnostics</a></li>
+      <li><a href="#">Design ILT/VILT</a></li>
+      <li><a href="#">Delivery</a></li>
+      <li><a href="#">Accessor</a></li>
+      <li><a routerLink="" routerLinkActive="active">My Certificates</a></li>
+      <li><a href="#">Policy</a></li>
+    </ul>
+  </nav>
+  <div class="body">
+    <div class="certificates">
+      <app-my-certificates></app-my-certificates>
+    </div>
+    <div class="testimonials">
+      <app-my-testimonials #one></app-my-testimonials>
+    </div>
+  </div>
