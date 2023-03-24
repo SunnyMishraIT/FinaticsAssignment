@@ -8,6 +8,7 @@ import { MyCertificatesComponent } from './my-certificates/my-certificates.compo
 import { MyTestimonialsComponent } from './my-testimonials/my-testimonials.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NguCarouselModule } from '@ngu/carousel';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    NguCarouselModule,
     HttpClientModule,
     FormsModule,
     AppRoutingModule
