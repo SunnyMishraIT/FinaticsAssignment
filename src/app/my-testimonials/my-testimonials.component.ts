@@ -69,6 +69,6 @@ filterTestimonials() {
         el.user.name.toLowerCase().includes(this.searchstring.toLowerCase())
       })
     }
-    console.log(this.filteredData)
+    // console.log(this.filteredData)
   }
 }

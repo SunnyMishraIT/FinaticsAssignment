@@ -15,11 +15,13 @@ export class MyCertificatesComponent {
     this.getActiveCertificates();
   }
   getActiveCertificates(){
+    let temp : any;
     this.dataService.getdata().subscribe((res)=>{
       this.activeCertificates = res.data.certificates;
-      // console.log(this.activeCertificates)
-      this.activeCertificatesArray = this.activeCertificates;
-      console.log(this.activeCertificatesArray)
+      this.activeCertificatesArray = this.activeCertificates.filter((certificate) => {
+        return certificate.isActive === 1;
+      });
+      // console.log(this.activeCertificatesArray)
     })
   }
 

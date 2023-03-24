@@ -12,7 +12,7 @@ export class NavbarComponent {
 
   }
   searchTestimonialData(e : any){
-    console.log(this.searchTestimonial)
+    // console.log(this.searchTestimonial)
     this.dataService.sendData(this.searchTestimonial)
   }
 }
