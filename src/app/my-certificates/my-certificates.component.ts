@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GetdataService } from '../services/getdata.service';
 
+
 @Component({
   selector: 'app-my-certificates',
   templateUrl: './my-certificates.component.html',
@@ -9,10 +10,16 @@ import { GetdataService } from '../services/getdata.service';
 export class MyCertificatesComponent {
   activeCertificates!: any[];
   activeCertificatesArray : any[] = [];
-  constructor(private dataService: GetdataService) { }
+  constructor(private dataService: GetdataService,) { }
 
   ngOnInit() {
     this.getActiveCertificates();
+//     const myCarouselElement = document.querySelector('#myCarousel')
+//     const carousel = new bootstrap.Carousel(myCarouselElement, {
+//       interval: 2000,
+//       touch: false
+// })
+
   }
   getActiveCertificates(){
     let temp : any;
