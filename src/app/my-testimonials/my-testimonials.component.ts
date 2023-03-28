@@ -32,7 +32,8 @@ export class MyTestimonialsComponent {
       el.id == id)
     if (index !== -1) {
       const approvedTestimonial = this.pendingTestimonials.splice(index, 1)[0];
-      this.approvedTestimonials.push(approvedTestimonial);
+      // this.approvedTestimonials.push(approvedTestimonial);
+      this.approvedTestimonials.unshift(approvedTestimonial);
     }
   }
   onreject(e: any) {
