@@ -1,5 +1,6 @@
    .testimonial-card {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 20px;
     margin-bottom: 30px;
   }
   
@@ -8,8 +9,8 @@
   }
 
   .tablerow {
-    border: 1 px solid rgb(218, 215, 215);
-    box-shadow: #a19999;
+    /* box-shadow: #a19999; */
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.28);
   }
   
   .testimonial-content p {
@@ -30,6 +31,7 @@
   
   .testimonial-content {
     vertical-align: bottom;
+    padding: 15px;
   }
   
   .testimonial-actions button {

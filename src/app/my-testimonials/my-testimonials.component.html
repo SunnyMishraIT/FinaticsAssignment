@@ -3,10 +3,11 @@
 <h4>My Testimonials</h4>
 <h6>Pending</h6>
   <!-- Pending Table  -->
+
   <table class="testimonial-card">
     <tr *ngFor="let testimonial of pendingTestimonials" class="tablerow">
       <td class="testimonial-img">
-        <img src="{{testimonial.user.avatar}}" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'"  alt="Testimonial Image" class="rounded-circle" width="150px">
+        <img [src]="testimonial.user.avatar" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'"  alt="Testimonial Image" class="rounded-circle" width="150px">
       </td>
       <td class="testimonial-content">
         <p>{{testimonial.text}}</p>
@@ -28,7 +29,7 @@
   <!-- Approved Table -->
   <h6>Approved</h6>
   <table class="testimonial-card">
-    <tr *ngFor="let testimonial of approvedTestimonials">
+    <tr *ngFor="let testimonial of approvedTestimonials" class="tablerow">
       <td class="testimonial-img">
         <img src="{{testimonial.user.avatar}}" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'" width="150px" alt="Testimonial Image" class="rounded-circle">
       </td>
@@ -42,7 +43,7 @@
   <div *ngIf="searchdata == true">
     <h6>Testimonials Search Results on the basis of Author Name</h6>
     <table class="testimonial-card">
-    <tr *ngFor="let testimonial of filteredData">
+    <tr *ngFor="let testimonial of filteredData" class="tablerow">
       <td class="testimonial-img">
         <img src="{{testimonial.user.avatar}}" onerror="this.onerror=null; this.src='https://www.customsoftwarelab.com/wp-content/uploads/2015/07/client-icon.png'" width="150px" alt="Testimonial Image" class="rounded-circle">
       </td>
